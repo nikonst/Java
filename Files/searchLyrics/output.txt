@@ -1,0 +1,24 @@
+Output for word to search : 'understand'
+
+---------------------------
+Directory List
+songs\IWantYou.txt
+songs\Jokerman.txt
+songs\LayLadyLay.txt
+songs\LikeARollingStone.txt
+songs\SubterraneanHomesickBlues.txt
+songs\TheTimesTheyAreAChangin.txt
+songs\ThunderOnTheMountain.txt
+songs\TweedleDeeAndTweedleDum.txt
+---------------------------
+***> Line 29 ' What you can't understand ' 
+For the Song 'The Times They Are A-Changin'' the lines found are 1
+
+
+***> Line 13 ' Look into my heart and you will sort of understand ' 
+For the Song 'Thunder On The Mountain' the lines found are 1
+
+
+totalLinesFound = 2
+
+Process finished with exit code 0
