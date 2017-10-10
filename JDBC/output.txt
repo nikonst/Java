@@ -1,0 +1,20 @@
+ 2016.2.4\lib\idea_rt.jar" com.intellij.rt.execution.application.AppMain accesDataBase
+Connecting to database...
+Creating statement...
+ID             Title                              Price          Author         
+--             -----                              -----          ------         
+6              The Dry                            12             Harper         
+5              Slow Horses                        12             Herron         
+3              Stalker                            23             Kepler         
+8              The Hypnotist                      11             Kepler         
+9              The Nightmare                      17             Kepler         
+10             The Couple Next Door               14             Lapena         
+4              Cast Iron                          23             May            
+1              The Bat                            15             Nesbo          
+2              The Redbreast                      12             Nesbo          
+7              Nemesis                            14             Nesbo          
+11             Rather Be the Devil                12             Rankin         
+12             Knots And Crosses                  11             Rankin         
+Done!
+
+Process finished with exit code 0

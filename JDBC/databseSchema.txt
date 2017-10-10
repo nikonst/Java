@@ -1,0 +1,15 @@
+Table: author
+Columns:
+	idauthor int(11) PK NN
+	name varchar(45) 
+	sirname varchar(45) 
+	address varchar(45) 
+	phone_number varchar(45)
+	
+Table: book
+Columns:
+	idbook int(11) PK NN
+	title varchar(45) 
+	author int(11) FK to author.idauthor
+	price int(11) 
+	quantity int(11)
