@@ -1,5 +1,4 @@
-Telephone keyboard input recognition
-(IEEExtreme Programming Contest) 
+### Telephone keyboard input recognition (IEEExtreme Programming Contest) 
 
 On a standard telephone, the numbers 1-9 can be used to correspond to a set of letters:
 
