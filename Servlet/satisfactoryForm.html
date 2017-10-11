@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Customer's Survey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+._bold {font-weight:bold; margin-top: 0.7cm;}
+._red {color:red;font-size:12pt;}
+</style>
+<script>
+function validateForm() {
+    var x = document.forms["survey_form"]["name"].value;
+	var y = document.forms["survey_form"]["sirname"].value;
+	var z = document.forms["survey_form"]["e_mail"].value;
+    if (x == "" || y == "" || z == "") {
+        alert("Fields with an asterisk must be filled out!");
+        return false;
+    }
+	
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+	if(document.forms["survey_form"]["e_mail"].value.match(mailformat))  
+	{  
+		document.form1.text1.focus();  
+		return true;  
+	}  
+	else  
+	{  
+	alert("You have entered an invalid email address!");  
+	document.forms["survey_form"]["e_mail"].focus();  
+	return false;  
+	}  
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+<h1>This is a Page that Runs on Tomcat</h1>
+<hr>
+<p>Please fill the Form</h1>
+<div class="main">
+
+<form name="survey_form" action="readForm" method="POST" target="_blank" onsubmit="return validateForm()">
+
+<p>
+<div class="col-xs-4">
+<b>Name: <span class="_red">*</span></b><input type="text" name="name" class="form-control"><br>
+<b>Sirname: <span class="_red">*</span></b><input type="text" name="sirname" class="form-control"><br>
+<b>E-mail: <span class="_red">*</span></b><br><input type="text" name="e_mail" class="form-control">
+</div>
+</p>
+
+<p style="clear:both"></p>
+<p>
+<b>Gender:</b><br>
+	<input type="radio" name="gender" value="male">Male<br>
+	<input type="radio" name="gender" value="female">Female<br>
+</p>
+<hr>
+<h2>Customer Satisfaction Survey</h2>
+<p>Please take a few moments to complete this satisfaction survey.</p>
+<hr>
+
+<p class="_bold">Overall, how satisfied were you with the product / service?</p>
+<input type="radio" name="satisfaction_level" value="very_satisfied" checked>Very Satisfied<br>
+<input type="radio" name="satisfaction_level" value="satisfied">Satisfied<br>
+<input type="radio" name="satisfaction_level" value="neutral">Neutral<br>
+<input type="radio" name="satisfaction_level" value="unsatisfied">Unsatisfied<br>
+<input type="radio" name="satisfaction_level" value="very_unsatisfied">Very Unsatisfied<br>
+<input type="radio" name="satisfaction_level" value="n_a">N/A
+
+<p class="_bold">Would you recommend our product / service to colleagues or contacts within your industry?</p>
+<input type="radio" name="recommend" value="definitely" checked>Definitely<br>
+<input type="radio" name="recommend" value="probably">Probably<br>
+<input type="radio" name="recommend" value="not_sure">Not Sure<br>
+<input type="radio" name="recommend" value="probably_not">Probably Not<br>
+<input type="radio" name="recommend" value="definitely_not">Definitely Not<br>
+
+<p class="_bold">Would you use our product / service in the future?</p>
+<input type="radio" name="future_use" value="definitely" checked>Definitely<br>
+<input type="radio" name="future_use" value="probably">Probably<br>
+<input type="radio" name="future_use" value="not_sure">Not Sure<br>
+<input type="radio" name="future_use" value="probably_not">Probably Not<br>
+<input type="radio" name="future_use" value="definitely_not">Definitely Not<br>
+
+<p class="_bold">How long have you used our product / service?</p>
+<input type="radio" name="use_length" value="less_than_a_month" checked> Less than a month<br>
+<input type="radio" name="use_length" value="1_6_months"> 1—6 months<br>
+<input type="radio" name="use_length" value="1_3_years"> 1—3 years<br>
+<input type="radio" name="use_length" value="over_three_years"> Over 3 Years<br>
+<input type="radio" name="use_length" value="never_used"> Never used<br>
+
+<p class="_bold">How often do you use product / service?</p>
+<input type="radio" name="use_frequency" value="once_a_week" checked>Once a week<br>
+<input type="radio" name="use_frequency" value="2_to_3_times_a_month">2 to 3 times a month<br>
+<input type="radio" name="use_frequency" value="once_a_month">Once a month<br>
+<input type="radio" name="use_frequency" value="less_than_once_a_month">Less than once a month<br>
+<p style="margin-top:1.2cm;margin-bottom:1.2cm"></p>
+<input type="submit" value="Submit" class="btn btn-default"> <input type="reset" value="Reset" class="btn btn-default">
+</p>
+</form>
+</div>
+
+</body>
+</html>
