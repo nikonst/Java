@@ -24,10 +24,7 @@ public class readJSON {
                 System.out.printf(format,(String) jsonObjectRow.get("title"),
                         (String) jsonObjectRow.get("year"),
                         (Long) jsonObjectRow.get("length_in_minutes"));
-                        /* System.out.println("Title: "+(String) jsonObjectRow.get("title")+
-                "\t\tYear: "+(String) jsonObjectRow.get("year") +
-                "\t\tLength:" + (Long) jsonObjectRow.get("length_in_minutes") ); */
-            }
+                 }
         } catch (Exception e) {
             e.printStackTrace();
         }
