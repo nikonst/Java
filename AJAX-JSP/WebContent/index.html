@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Movie Quotes</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+   	function fetch(str){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+       if(this.readyState == 4 && this.status == 200){
+        	var response = this.responseText;
+	 		document.getElementById("stage").innerHTML=response;
+        }
+     	};
+       	request.open("GET", "details.jsp?str="+str, true);
+     	request.send();
+     }
+</script>
+<script>
+</script>
+
+<style>
+body {padding: 10%; margin: 0; text-align: center;}
+h2 {color:maroon;}
+#stage {font-family:verdana;padding:30px;font-size:14pt;}
+</style>
+
+</head>
+<body>
+ <img src="imgs/movies.jpg"  class="img-responsive" />
+ <h2>Some Movie Quotes</h2>
+ <hr>
+ <button type="button" class="btn btn-warning" onclick="fetch('casablanca')">Casablanca</button>
+ <button type="button" class="btn btn-warning" onclick="fetch('lovestory')">Love Story</button>
+ <button type="button" class="btn btn-warning" onclick="fetch('scarface')">Scarface</button>
+ <button type="button" class="btn btn-warning" onclick="fetch('taxidriver')">Taxi Driver</button>
+ <button type="button" class="btn btn-warning" onclick="fetch('thedarkknight')">The Dark Knight</button>
+ <button type="button" class="btn btn-warning" onclick="fetch('thegodfather')">The Godfather</button>
+ <button type="button" class="btn btn-warning" onclick="fetch('thesilence')">The Silence of the Lamps</button>
+ <button type="button" class="btn btn-default" onclick="document.getElementById('stage').innerHTML='';">Clear</button>
+ <div id="stage"></div>
+ </body>
+</html>
